@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account Information</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+  <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://github.com/tuankiet65/swen101">
+        <b>MindPlanner</b>
+      </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="Dashboard.html">
+          <i class="fas fa-tachometer-alt"></i>&nbsp;Dashboard
+        </a>
+        <a class="navbar-item" href="Calendar.html">
+          <i class="fas fa-calendar-alt"></i>&nbsp;Calendar
+        </a>
+        <a class="navbar-item" href="Sleep.html">
+          <i class="fas fa-bed"></i>&nbsp;Sleep
+        </a>
+        <a class="navbar-item" href="StressMeter.html">
+          Stress Meter
+        </a>
+        <a class="navbar-item" href="AccountInformation.html">
+          <i class="fas fa-user"></i>&nbsp;Account
+        </a>
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" href="Login.html">
+          <i class="fas fa-sign-out-alt"></i>&nbsp;Logout
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section">
+    <div class="fluid-container">
+      <div class="content">
+        <h1>Account Information</h1>
+        <p>
+          Here you can access the settings for your account including username, email, password & notification settings.
+          Labels with * are required fields.
+        </p>
+
+        <div class="columns">
+          <div class="column">
+            <h3>Change Email</h3>
+            <form>
+              <div class="field">
+                <label class="label"><b>Current Email</b></label>
+                <div class="control">
+                  <input class="input" type="text" value="adam.smith@gmail.com" disabled>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>New Email*</b></label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-email@rit.edu" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>Confirm New Email*</b></label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-email@rit.edu" required>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-fullwidth is-primary" type="button" onclick="change_email(); return false">
+                    Change Email
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <h3>Change Username</h3>
+            <form>
+              <div class="field">
+                <label class="label">Current Username</label>
+                <div class="control">
+                  <input class="input" type="text" value="adam.smith" disabled>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">New Username*</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-username" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label">Confirm New Username*</label>
+                <div class="control">
+                  <input class="input" type="text" placeholder="new-username" required>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-fullwidth is-primary" type="button"
+                    onclick="change_username(); return false">
+                    Change Username
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="column">
+            <h3>Change Password</h3>
+            <form>
+              <div class="field">
+                <label class="label"><b>Current Password*</b></label>
+                <div class="control">
+                  <input class="input" type="password" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>New Password*</b></label>
+                <div class="control">
+                  <input class="input" type="password" required>
+                </div>
+              </div>
+              <div class="field">
+                <label class="label"><b>Confirm New Password*</b></label>
+                <div class="control">
+                  <input class="input" type="password" required>
+                </div>
+              </div>
+              <div class="field">
+                <div class="control">
+                  <button class="button is-fullwidth is-primary" type="button"
+                    onclick="change_password(); return false">
+                    Change Password
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <h3>Get Notified</h3>
+            <p>
+              Enable or disable email notifications.
+            </p>
+            <div class="buttons">
+              <button onclick="enable_notification()" class="button is-fullwidth is-primary">Enable</button>
+              <button onclick="disable_notification()" class="button is-fullwidth is-danger">Disable</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <script>
+    function change_email() {
+      alert("Email Sucessfully Changed.");
+    }
+
+    function change_password() {
+      alert("Password Sucessfully Changed.");
+    }
+
+    function change_username() {
+      alert("Username Sucessfully Changed.");
+    }
+
+    function enable_notification() {
+      alert("Notifications have been enabled.");
+    }
+
+    function disable_notification() {
+      alert("Notifications have been disabled.");
+    }
+  </script>
+</body>
+
+</html>
